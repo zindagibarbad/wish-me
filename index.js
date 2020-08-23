@@ -1,7 +1,7 @@
 var d = new Date();
 var time = d.getHours();
 
-if (time > 6 && time < 12) {
+if (time >= 4 && time < 12) {
   console.log("Morning")
   document.querySelector('.moon'). 
             style.display = 'none'; 
@@ -12,7 +12,7 @@ if (time > 6 && time < 12) {
   document.querySelector('.wishme'). 
             innerText = 'Morning';
 }
-if (time > 12 && time < 4) {
+if (time >= 12 && time < 16) {
     console.log("Afternoon")
   document.querySelector('.moon'). 
             style.display = 'none'; 
@@ -21,17 +21,17 @@ if (time > 12 && time < 4) {
   document.querySelector('.wishme'). 
             innerText = 'Afternoon';
 }
-if (time > 4 && time < 7) {
+if (time >= 16 && time < 19) {
     console.log("Evening")
- document.querySelectorAll('.moon'). 
-            style.display = 'block'; 
-  document.querySelectorAll('.sun'). 
+ document.querySelector('.moon'). 
             style.display = 'none'; 
+  document.querySelector('.sun'). 
+            style.display = 'block'; 
   document.querySelector('.wishme'). 
             innerText = 'Evening';
 }
 
-if (time > 7) {
+if (time >= 19 && time <= 24 || time >=0 && time < 4 ) {
     console.log("Night");
  document.querySelector('.moon'). 
             style.display = 'block'; 
@@ -40,4 +40,3 @@ if (time > 7) {
   document.querySelector('.wishme'). 
             innerText = 'Night';
 }
- 
