@@ -1,6 +1,7 @@
 var d = new Date();
 var time = d.getHours();
 
+time = 10;
 if (time >= 4 && time < 12) {
   console.log("Morning")
   document.querySelector('.moon'). 
